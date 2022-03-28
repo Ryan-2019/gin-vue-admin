@@ -135,9 +135,9 @@ const route = useRoute()
 
 const formData = ref({
   label: null,
-  value: null,
+  value: 0,
   status: true,
-  sort: null
+  sort: 0
 })
 const rules = ref({
   label: [
@@ -225,9 +225,9 @@ const closeDialog = () => {
   dialogFormVisible.value = false
   formData.value = {
     label: null,
-    value: null,
+    value: 0,
     status: true,
-    sort: null,
+    sort: 0,
     sysDictionaryID: ''
   }
 }
@@ -275,6 +275,13 @@ const enterDialog = async() => {
 }
 const openDialog = () => {
   type.value = 'create'
+  formData.value = {
+    label: null,
+    value: 0,
+    status: true,
+    sort: 0,
+    sysDictionaryID: ''
+  }
   dialogFormVisible.value = true
 }
 
